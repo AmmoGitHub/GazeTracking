@@ -22,11 +22,18 @@ while True:
     if gaze.is_blinking():
         text = "Blinking"
     elif gaze.is_right():
-        text = "Looking right"
+        text = "Looking right and "
     elif gaze.is_left():
-        text = "Looking left"
+        text = "Looking left and "
     elif gaze.is_center():
-        text = "Looking center"
+        text = "Looking center and "
+
+    if gaze.is_level():
+        text = text + "level"
+    elif gaze.is_up():
+        text = text + "up"
+    elif gaze.is_down():
+        text = text + "down"
 
     cv2.putText(frame, text, (90, 60), cv2.FONT_HERSHEY_DUPLEX, 1.6, (147, 58, 31), 2)
 

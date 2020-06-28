@@ -31,7 +31,7 @@ class Eye(object):
         """
         x = int((p1.x + p2.x) / 2)
         y = int((p1.y + p2.y) / 2)
-        return (x, y)
+        return x, y
 
     def _isolate(self, frame, landmarks, points):
         """Isolate an eye, to have a frame without other part of the face.
